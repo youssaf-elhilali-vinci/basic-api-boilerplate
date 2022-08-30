@@ -99,6 +99,7 @@ module.exports = {
   printWidth: 120,
   arrowParens: 'always',
   bracketSpacing: true,
+  trailingComma: 'all',
 };
 ```
 - Concernant le formateur, apparemment le package **prettier-airbnb-config** ne fournit pas une config qui correspond au style guide d'Airbnb. Nous avons du changer les règles au sein de **.prettierrc.js** :
