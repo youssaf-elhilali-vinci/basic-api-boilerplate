@@ -107,6 +107,9 @@ module.exports = {
   - toujours mettre les parenthèses lors d'un unique paramètre via ***arrowParens**.
   - mettre un espace entre les accolades d'un objet via **bracketSpacing**.
   - toujours ajouter une virgule (même dans les fonctions quand multilignes, pour le dernier paramètre) : **trailingComma**.  
+- Toujours concernant le formateur, celui-ci fait du bon travail, mais cela ne colle pas toujours avec ce que le linter impose. Pour désactiver les règles qui entrent en conflit avec Prettier :
+  - ce package a été installé : `npm i -D eslint-config-prettier`.
+  - la config du linter a été changée dans **.estlintrc.js** en ajoutant **prettier** à la fin de l'array "extends" pour qu'il puisse remplacer d'autres configurations.
 - Certaines règles d'Airbnb sont difficilement applicables. La 1ère est que sous Windows ou Linux, les sauts à la lignes sont faits différemment. On souhaite laisser cela acceptable. De plus, on souhaite aussi permettre le hoisting des fonctions. Afin de rendre le code plus lisible, on aimerait pouvoir utiliser une fonction, même si ça définition est donnée plus loin dans le script. Nous avons donc assoupli ces deux règles, 'linebreak-style' & 'no-use-before-define', au sein du fichier de configuration du linter **.eslintrc.js**.
 
 - Afin de checker ou corriger les erreurs de style, on peut rajouter deux lignes à **package.json** :
